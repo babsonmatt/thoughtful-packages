@@ -96,7 +96,7 @@ describe("PackageSorter", () => {
     expect(sorter.sort(...notBulkyNorHeavy)).not.toBe(Stack.SPECIAL);
   });
 
-  test("sort should return Stack.STANDARD if package isBulky OR isHeavy", () => {
+  test("sort should return Stack.STANDARD if package is neither bulky nor heavy", () => {
     expect(sorter.sort(...notBulkyNorHeavy)).toBe(Stack.STANDARD);
 
     expect(sorter.sort(...heavy)).not.toBe(Stack.STANDARD);
